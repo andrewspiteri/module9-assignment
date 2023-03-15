@@ -1,0 +1,13 @@
+
+version: '3.3'
+
+services:
+  dssdocker:
+    image: 'jupyter/datascience-notebook:latest'
+    ports:
+        - '8888:8888'
+   
+    volumes:
+         - './:/home/jovyan/work/module9-assignment'
+    container_name: module9-assignment
+    command: "start-notebook.sh"
